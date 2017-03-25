@@ -21,12 +21,15 @@ public class Counter : MonoBehaviour {
 		if (col.gameObject.name == "Tomato") {
 			print ("tomato!");
 			score++;
+			col.gameObject.name = "noname";
 		} else if (col.gameObject.name == "Cheese") {
 			print ("cheese!");
 			score++;
+			col.gameObject.name = "noname";
 		} else if (col.gameObject.name == "Lettuce") {
 			print ("lettuce!");
 			score++;
+			col.gameObject.name = "noname";
 		}
 
 		if (score >= 3) {
