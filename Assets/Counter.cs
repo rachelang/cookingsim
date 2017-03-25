@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Counter : MonoBehaviour {
 
@@ -19,15 +20,15 @@ public class Counter : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col){
 		if (col.gameObject.name == "Tomato") {
-			print ("tomato!");
+			GameObject.Find("instructions").GetComponent<Text>().text = "Tomato placed!";
 			score++;
 			col.gameObject.name = "noname";
 		} else if (col.gameObject.name == "Cheese") {
-			print ("cheese!");
+			GameObject.Find("instructions").GetComponent<Text>().text = "Cheese placed!";
 			score++;
 			col.gameObject.name = "noname";
 		} else if (col.gameObject.name == "Lettuce") {
-			print ("lettuce!");
+			GameObject.Find("instructions").GetComponent<Text>().text = "Lettuce placed!";
 			score++;
 			col.gameObject.name = "noname";
 		}
